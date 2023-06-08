@@ -1,0 +1,193 @@
+@font-face {
+    font-family: CaveatBrush;
+    src: url("assets/fonts/CaveatBrush-Regular.ttf");
+}
+
+@font-face {
+    font-family: Satisfy;
+    src: url("assets/fonts/Satisfy-Regular.ttf");
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flow {
+    from {
+        transform: scaleX(0%)
+    }
+    to {
+        transform: scaleX(100%)
+    }
+}
+
+
+body {
+    background-image: url("assets/images/tile.jpg");
+    margin: 0;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin: 20px;
+    padding-top: 5px;
+    font-family: CaveatBrush;
+    font-size: 3.5em;
+    animation: flow 0.4s ease-out;
+    
+
+}
+
+main {
+    margin: 20px;
+}
+
+
+.form {
+    background-image: url(assets/images/formbg.jpg);
+    background-repeat: repeat-y;
+    background-size: contain;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form>h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: CaveatBrush;
+}
+
+form>input {
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-left: 4px;
+
+}
+
+textarea {
+    resize: none;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+form>label {
+    font-size: larger;
+    font-family: CaveatBrush;
+}
+
+.centerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin: 10px;
+}
+
+
+
+#notesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+.note {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+    width: 180px;
+    height: 250px;
+    margin: 5px;
+    padding-top: 60px;
+    background-image: url(assets/images/notebg.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    color: black;
+    animation: fadeIn 1s;
+}
+
+.note:hover>.deleteIcon {
+    display: block;
+    border: 1px solid black;
+}
+
+.deleteIcon {
+    position: absolute;
+    height: max-content;
+    width: 25px;
+    padding: 2px;
+    top: 25px;
+    right: 5px;
+    display: none;
+    cursor: pointer;
+}
+
+.scroll {
+    border: none;
+    padding: 5px;
+    width: 200px;
+    height: 100px;
+    overflow: scroll;
+}
+
+/* Scrollbar styles */
+.scroll::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+}
+
+.scroll::-webkit-scrollbar-track {
+box-shadow: inset 0 0 10px olivedrab;
+border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background: yellowgreen; 
+box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+background: #7bac10;
+}
+
+.note>h7 {
+    margin-top: 90px;
+}
+
+
+footer {
+    /* text-align: center; */
+    display: flex;
+    padding-top: 5px;
+    justify-content: center;
+    height: 10vh;
+    margin: 20px;
+    font-family: Satisfy;
+    font-size: xx-large;
+    margin-top: auto;
+}
