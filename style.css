@@ -8,6 +8,7 @@
     font-family: Satisfy;
     src: url("assets/fonts/Satisfy-Regular.ttf");
 }
+
 /* End Fonts */
 
 /* Animations */
@@ -25,10 +26,12 @@
     from {
         transform: scaleX(0%)
     }
+
     to {
         transform: scaleX(100%)
     }
 }
+
 /* End animations */
 
 
@@ -103,11 +106,10 @@ form>label {
 
 button {
     margin: 10px;
-    font-family: CaveatBrush;
 }
 /*End Form */
 
- /* Notes Container */
+/* Notes Container */
 #notesContainer {
     display: flex;
     flex-wrap: wrap;
@@ -160,30 +162,30 @@ button {
 
 /* Scrollbar styles */
 .scroll::-webkit-scrollbar {
-width: 12px;
-height: 12px;
+    width: 12px;
+    height: 12px;
 }
 
 .scroll::-webkit-scrollbar-track {
-box-shadow: inset 0 0 10px olivedrab;
-border-radius: 10px;
+    box-shadow: inset 0 0 10px olivedrab;
+    border-radius: 10px;
 }
 
 .scroll::-webkit-scrollbar-thumb {
-border-radius: 10px;
-background: yellowgreen; 
-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    border-radius: 10px;
+    background: yellowgreen;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .scroll::-webkit-scrollbar-thumb:hover {
-background: #7bac10;
+    background: #7bac10;
 }
 
 .note>h7 {
     margin-top: 90px;
 }
 
- /*End Notes Container */
+/*End Notes Container */
 
 /* Footer */
 footer {
@@ -196,4 +198,5 @@ footer {
     font-size: xx-large;
     margin-top: auto;
 }
+
 /*End Footer */
