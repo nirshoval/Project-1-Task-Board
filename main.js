@@ -31,7 +31,6 @@ function addTask() {
     // display array of tasks
     displayNewTasks(task, tasks.length);
 
-
     // Clear the note container
     taskDetailBox.value = "";
     dueDateBox.value = "";
@@ -39,8 +38,8 @@ function addTask() {
 
     // Focus - back to the first label
     taskDetailBox.focus();
-
 }
+
 // Display new tasks in the container
 function displayNewTasks(newTask, totalTasks) {
     const notesContainer = document.getElementById("notesContainer");
@@ -76,14 +75,9 @@ function displayTasks() {
 function deleteItem(element) {
     const index = element.id;
     const note = document.getElementById(index);
-    note.style.opacity = 0;
-    note.classList.add("fade-out");
-    setTimeout(() => {
-        note.style.display = "none";
-        tasks.splice(index, 1);
-        saveToLocalStorage();
-        note.parentElement.remove();
-    }, 200);
+    tasks.splice(index, 1);
+    note.parentElement.remove();
+    saveToLocalStorage();
 }
 
 // Save to Local Storage
