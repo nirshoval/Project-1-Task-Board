@@ -41,7 +41,7 @@ function addTask() {
     taskDetailBox.focus();
 
 }
-
+// Display new tasks in the container
 function displayNewTasks(newTask, totalTasks) {
     const notesContainer = document.getElementById("notesContainer");
     const child = document.createElement("div");
@@ -69,11 +69,10 @@ function displayTasks() {
         Time: ${tasks[i].time} </p>
             </div>`;
     }
-
     notesContainer.innerHTML = html;
-
 }
 
+// Delete note
 function deleteItem(element) {
     const index = element.id;
     const note = document.getElementById(index);
@@ -87,11 +86,13 @@ function deleteItem(element) {
     }, 200);
 }
 
+// Save to Local Storage
 function saveToLocalStorage() {
     const str = JSON.stringify(tasks);
     localStorage.setItem(TASKS_KEY, str);
 }
 
+// Load from Local Storage
 function loadFromLocalStorage() {
     const strTasks = localStorage.getItem(TASKS_KEY);
     if (strTasks != null && strTasks.length > 0) {

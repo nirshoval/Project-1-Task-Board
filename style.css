@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
     font-family: CaveatBrush;
     src: url("assets/fonts/CaveatBrush-Regular.ttf");
@@ -7,7 +8,9 @@
     font-family: Satisfy;
     src: url("assets/fonts/Satisfy-Regular.ttf");
 }
+/* End Fonts */
 
+/* Animations */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -26,6 +29,7 @@
         transform: scaleX(100%)
     }
 }
+/* End animations */
 
 
 body {
@@ -44,8 +48,6 @@ header {
     font-family: CaveatBrush;
     font-size: 3.5em;
     animation: flow 0.4s ease-out;
-    
-
 }
 
 main {
@@ -53,6 +55,7 @@ main {
 }
 
 
+/* Form */
 .form {
     background-image: url(assets/images/formbg.jpg);
     background-repeat: repeat-y;
@@ -102,8 +105,9 @@ button {
     margin: 10px;
 }
 
+/*End Form */
 
-
+ /* Notes Container */
 #notesContainer {
     display: flex;
     flex-wrap: wrap;
@@ -179,11 +183,12 @@ background: #7bac10;
     margin-top: 90px;
 }
 
+ /*End Notes Container */
 
+/* Footer */
 footer {
-    /* text-align: center; */
     display: flex;
-    padding-top: 5px;
+    padding-top: 80px;
     justify-content: center;
     height: 10vh;
     margin: 20px;
@@ -191,3 +196,4 @@ footer {
     font-size: xx-large;
     margin-top: auto;
 }
+/*End Footer */
