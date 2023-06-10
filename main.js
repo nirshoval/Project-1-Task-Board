@@ -1,15 +1,15 @@
-// load item from local storage
 const TASKS_KEY = "nir-Task-Board";
 
 // Create array
 let tasks = [];
 
+// load item from local storage
 loadFromLocalStorage();
 
 function addTask() {
     // Prevent Refresh
     event.preventDefault();
-    // get form task box
+    // get form's inputs box
     const taskDetailBox = document.getElementById("taskDetailBox");
     const dueDateBox = document.getElementById("dueDateBox");
     const timeBox = document.getElementById("timeBox");
@@ -30,12 +30,12 @@ function addTask() {
     // display array of tasks
     displayNewTasks(task, tasks.length);
 
-    // Clear the note container
+    // Clear form's inputs
     taskDetailBox.value = "";
     dueDateBox.value = "";
     timeBox.value = "";
 
-    // Focus - back to the first label
+    // Focus - back to the first input
     taskDetailBox.focus();
 }
 
