@@ -23,7 +23,6 @@ function addTask() {
 
     // Add object to array
     tasks.push(task);
-    console.log(tasks);
 
     // save to local storage
     saveToLocalStorage();
@@ -78,6 +77,7 @@ function deleteItem(element) {
     tasks.splice(index, 1);
     note.parentElement.remove();
     saveToLocalStorage();
+    displayNewTasks();
 }
 
 // Save to Local Storage
@@ -94,4 +94,3 @@ function loadFromLocalStorage() {
     }
     displayTasks();
 }
-
